@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react'
 import Layout from '../components/Layout';
 import { StoreContext } from '../context/StoreContext'
-import { useNavigate } from 'react-router-dom'
 import '../styles/Create.css'
 
 function Create() {
@@ -13,7 +12,6 @@ function Create() {
     const [reviews, setReviews] = useState('');
     
     const { createBook } = useContext(StoreContext);
-    const navigate = useNavigate();
 
     const handleOnChangeFile = (e) => {
         const element = e.target
@@ -43,7 +41,6 @@ function Create() {
         console.log(newBook)
 
         createBook(newBook);
-        navigate('/home')
     }
 
     const handleChange = (e) => {

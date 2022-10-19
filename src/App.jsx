@@ -6,18 +6,16 @@ import View from './pages/View';
 
 export default function App() {
   return (
-      <>
         <Routes>
           <Route 
-            path='https://nicolas-katz.github.io/BookStore/' 
+            path='/' 
             element={<Index />} />
           <Route 
-            path='https://nicolas-katz.github.io/BookStore/create' 
+            path='create' 
             element={<Create />} />
           <Route 
-            path='https://nicolas-katz.github.io/BookStore/book/:bookId' 
+            path='book/:bookId' 
             element={<View />} />
         </Routes>  
-      </>
   )
 }
